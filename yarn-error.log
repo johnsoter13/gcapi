@@ -1,0 +1,49 @@
+Arguments: 
+  /home/jsoter/.nvm/versions/node/v17.3.0/bin/node /home/jsoter/.nvm/versions/node/v17.3.0/bin/yarn
+
+PATH: 
+  /home/jsoter/.nvm/versions/node/v17.3.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2021.825.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/130/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/130/DTS/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/Azure Data Studio/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/johns/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/johns/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  17.3.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile '/home/jsoter/.cache/v6/npm-@azure-abort-controller-1.0.4-fd3c4d46c8ed67aace42498c8e2270960250eafd-integrity/node_modules/@azure/abort-controller/CHANGELOG.md' -> '/mnt/c/Users/johns/Documents/gcapi/node_modules/@azure/abort-controller/CHANGELOG.md'
+
+npm manifest: 
+  {
+      "name": "what2watch-backend",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+          "dev": "NODE_ENV=development nodemon index.js"
+      },
+      "author": "John Soter",
+      "license": "MIT",
+      "dependencies": {
+          "babel-polyfill": "^6.26.0",
+          "babel-preset-es2015": "^6.24.1",
+          "babel-preset-stage-0": "^6.24.1",
+          "babel-register": "^6.26.0",
+          "body-parser": "^1.19.0",
+          "express": "^4.17.1",
+          "mongoose": "^5.11.11",
+          "morgan": "^1.10.0",
+          "mssql": "^7.2.1"
+      },
+      "devDependencies": {
+          "nodemon": "^2.0.7"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
