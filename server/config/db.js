@@ -1,34 +1,14 @@
-import GolfCourse from './model';
-const sql = require('mssql');
+import mongoose from 'mongoose';
 
-export const getAllGolfCourses = async (req, res) => {
-  try {
-    let config = {
-      user: 'golf_user',
-      password: 'a',
-      server: 'DESKTOP-2EBCEMD',
-      database: 'golf_db',
+export default () => {
+  mongoose.Promise = global.Promise;
+  mongoose.set('useNewUrlParser', true);
+  mongoose.set('useFindAndModify', false);
+  mongoose.set('useCreateIndex', true);
+  mongoose.set('useUnifiedTopology', true);
+  mongoose.connect('mongodb://localhost/golfCoursApi');
 
-      options: {
-        trustedConnection: true,
-        trustServerCertificate: true,
-      },
-    };
-
-    sql.connect(config, (err) => {
-      let request = new sql.Request();
-
-      request.query('select * from GolfCourse', (err, recordset) => {
-        if (err) {
-          console.log(err);
-        }
-
-        return res.status(200).json({ getAllGolfCourses: recordset.recordset });
-      });
-    });
-  } catch (e) {
-    return res
-      .status(e.status)
-      .json({ error: true, message: 'error with What2Watch' });
-  }
+  mongoose.connection
+    .once('open', () => console.log('Mongodb running'))
+    .on('error', (err) => console.log(err));
 };
