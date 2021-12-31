@@ -13,7 +13,7 @@ middlewareConfig(app);
 
 app.use('/api', [GolfCourseRoutes]);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, (err) => {
   if (err) {

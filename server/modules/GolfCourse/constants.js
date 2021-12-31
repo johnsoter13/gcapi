@@ -8,4 +8,7 @@ export const SQL_CONFIG = {
       trustedConnection: true,
       trustServerCertificate: true,
     },
-  };
+};
+
+export const DEFAULT_SERVER_FAILURE_CODE = 500;
+export const DEFAULT_SUCCESS_CODE = 200
